@@ -1,0 +1,385 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    font-family: "Segoe UI", "Noto Sans TC";
+    display: block;
+    color: #3F5D45;
+    font-weight: 400;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+body{
+    font-family: "Segoe UI", "Noto Sans TC";
+    color: #3F5D45;
+    font-weight: 400;
+}
+.wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 42px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.hamburgerMenu{
+    display: none;
+    padding: 20px 30px 20px 0;
+    cursor: pointer;
+}
+.hamburgerMenu img{
+    width: 20px;
+}
+.header h1 a{
+    width: 220px;
+    height: 40px;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/logo-all-dark.svg");
+    text-indent: 101%;
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.nav{
+    display: flex;
+    margin-left: auto;
+}
+.nav a{
+    font-size: 16px;
+    line-height: 24px;
+    padding: 20px 30px;
+}
+.cart{
+    padding: 20px 0 20px 60px;
+}
+.cart img{
+    width: 24px;
+}
+.banner{
+    margin-bottom: 40px;
+}
+.banner img{
+    width: 100%;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+.classifiedMenu{
+    width: 32%;
+}
+.classifiedMenu h2,
+.classifiedMenu a{
+    padding: 16px 0;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+}
+.classifiedMenu h2{
+    color: #EAF0ED;
+    background: #3F5D45;
+}
+.mainPage{
+    width: 68%;
+}
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px; /* 30px-20px [已扣除.product li的 margin-bottom: 20px] */
+}
+.product li{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 47%;
+    margin-left: 3%;
+}
+.productImg{
+    position: relative;
+}
+.productImg img{
+    width: 100%;
+}
+.todaySpecial{
+    writing-mode: vertical-lr;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    color: #EAF0ED;
+    font-size: 16px;
+    line-height: 20px;
+    background: #3F5D45;
+    padding: 10px;
+    font-weight: 100;
+}
+.like{
+    position: absolute;
+    top: 9px; /* 19-10 */
+    right: 12px; /* 22-10 */
+    padding: 10px;/* 增加點擊範圍 top,right需減10px */
+}
+.productDetails{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    border: 1px solid #EAF0ED;
+}
+.name,
+.price{
+    padding: 14px 7px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 28px;
+}
+.name{
+    width: 60%;
+    border-right: 1px solid #EAF0ED;
+}
+.price{
+    width: 40%;
+}
+.addToCart{
+    padding: 16px 0;
+    text-align: center;
+    font-size: 24px;
+    line-height: 20px;
+    background: #EAF0ED;
+    font-weight: 500;
+}
+.page{
+    display: flex;
+    justify-content: flex-end;
+}
+.page li{
+    width: 9.4%;/*47%(.product li的width)/5(.page li共有5個)=9.4%*/
+}
+.page a{
+    height: 60px;
+    border: solid 1px #EAF0ED;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    padding: 16px;
+}
+.subscribe{
+    display: flex;
+    background: #3F5D45;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 122px;
+}
+.subscribe label{
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+.subscribe label img{
+    width: 40px;
+    margin-right: 20px;
+}
+.subscribe label h2{
+    color: #EAF0ED;
+    font-size: 24px;
+    line-height: 29px;
+}
+.inputMail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mail{
+    background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/mail-24px.png?raw=true");  
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: 20px, center;
+    text-indent: 60px;
+    border: none;
+    outline: none;
+    width: 315px;
+    height: 56px;
+    font-size: 18px;
+}
+.inputMail button{
+    background-color: #FFE180;
+    width: 64px;
+    height: 56px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe button img{
+    width: 20px;
+}
+.footer{
+    background: #EAF0ED;
+    padding: 40px 122px 30px 122px;
+}
+.footerMain{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.contact img{
+    width: 172px;
+    margin-bottom: 115px;
+}
+.contactInfo li{
+    font-size: 16px;
+    line-height: 24px;
+}
+.footerLink{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.socialMedia{
+    display: flex;
+}
+.socialMedia img{
+    width: 32px;
+}
+.socialMedia li{
+    margin-right: 8px;
+}
+.copyright{
+    font-size: 16px;
+    line-height: 19px;
+}
+.slogan{
+    font-size: 23px;
+    font-family: "Noto Serif TC";
+    font-weight: 600;
+    writing-mode: vertical-rl;
+    line-height: 1.5;
+    text-indent: -10px;
+    padding-top: 10px;/*調回text-indent的距離*/
+    letter-spacing: 6px;
+}
+.decorativeLine{
+    display: inline-block;
+    width: 0;
+    height: 48px;
+    border-right: 1px solid #3F5D45;
+}
+.hamburgerMenu:hover,
+.nav a:hover,
+.cart:hover,
+.classifiedMenu a:hover,
+.front:hover,
+.back:hover{
+    background: #EAF0ED;
+}
+.pageNum:hover,
+.addToCart:hover{
+    color: #EAF0ED;
+    background: #3F5D45;
+}
+@media(max-width: 992px){
+    .subscribe{
+        flex-direction: column;
+        align-items: center;
+    }
+    .subscribe label{
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+}
+@media(max-width: 768px){
+    .wrap{
+        padding: 20px;
+    }
+    .hamburgerMenu{
+        display: block; 
+    }
+    .header h1 a{
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/student-week1/logotype-lg-dark.svg");
+        background-position: center;
+        width: 150px;
+        padding: 30px 0;
+    }
+    .nav{
+        display: none;
+    }
+    .cart{
+        padding-left: 30px;
+    }
+    .main{
+        flex-direction: column;
+    }
+    .classifiedMenu{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .classifiedMenu ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .classifiedMenu li{
+        width: 50%;
+    }
+    .mainPage{
+        width: 100%;
+    }
+    .product{
+        justify-content: space-between;
+    }
+    .product li{
+        width: 48.5%;
+        margin-left: 0;
+    }
+    .page li{
+        width: 9.7%;/*48.5/5=9.7希望.page一直保持與.product li等寬*/
+    }
+    .inputMail{
+        width: 100%;
+    }
+    .inputMail .mail{
+        width: 100%;
+    }
+    .inputMail button{
+        width: 64px;
+    }
+    .contact img{
+        margin-bottom: 40px;
+    }
+    .slogan{
+        display: none;
+    }
+    .footerLink{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .socialMedia{
+        margin-bottom: 23px;
+    }
+}
+@media(max-width: 568px){
+    .classifiedMenu li{
+        width: 100%;
+    }
+    .product li{
+        width: 100%;
+    }
+    .page li{
+        width: 20%;
+    }
+    .footer, 
+    .subscribe{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .subscribe label h2{
+        font-size: 22px;
+    }
+}
