@@ -1,41 +1,38 @@
 *,*::before,*::after{
     box-sizing: border-box;
 }
+body,
 a{
-    text-decoration: none;
-    font-family: "Segoe UI", "Noto Sans TC";
-    display: block;
+    font-family: "Segoe UI", "Noto Sans TC", sans-serif;
     color: #3F5D45;
     font-weight: 400;
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+    display: block;
 }
 img{
     display: block;
     max-width: 100%;
     height: auto;
 }
-body{
-    font-family: "Segoe UI", "Noto Sans TC";
-    color: #3F5D45;
-    font-weight: 400;
-}
-.wrap{
-    max-width: 1200px;
+.container{
+    max-width: 940px;
     margin: 0 auto;
-    padding: 30px 42px;
 }
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 20px;
     margin-bottom: 30px;
 }
 .hamburgerMenu{
     display: none;
     padding: 20px 30px 20px 0;
     cursor: pointer;
-}
-.hamburgerMenu img{
-    width: 20px;
+    font-size: 28px;
 }
 .header h1 a{
     width: 220px;
@@ -51,15 +48,13 @@ body{
     margin-left: auto;
 }
 .nav a{
-    font-size: 16px;
-    line-height: 24px;
     padding: 20px 30px;
 }
 .cart{
     padding: 20px 0 20px 60px;
 }
-.cart img{
-    width: 24px;
+.cart .material-icons{
+    font-size: 28px;
 }
 .banner{
     margin-bottom: 40px;
@@ -79,7 +74,6 @@ body{
 .classifiedMenu a{
     padding: 16px 0;
     font-size: 24px;
-    line-height: 40px;
     text-align: center;
 }
 .classifiedMenu h2{
@@ -98,7 +92,6 @@ body{
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
     width: 47%;
     margin-left: 3%;
 }
@@ -114,17 +107,17 @@ body{
     left: 20px;
     top: 0;
     color: #EAF0ED;
-    font-size: 16px;
-    line-height: 20px;
     background: #3F5D45;
-    padding: 10px;
+    padding: 8px;
     font-weight: 100;
+    letter-spacing: 3px;
 }
 .like{
     position: absolute;
     top: 9px; /* 19-10 */
     right: 12px; /* 22-10 */
-    padding: 10px;/* 增加點擊範圍 top,right需減10px */
+    padding: 10px 10px 20px 20px;/* 增加點擊範圍 top,right需減10px */
+    font-size: 28px;
 }
 .productDetails{
     flex-grow: 1;
@@ -134,10 +127,9 @@ body{
 }
 .name,
 .price{
-    padding: 14px 7px;
+    padding: 14px 0px;
     text-align: center;
     font-size: 20px;
-    line-height: 28px;
 }
 .name{
     width: 60%;
@@ -150,9 +142,10 @@ body{
     padding: 16px 0;
     text-align: center;
     font-size: 24px;
-    line-height: 20px;
+    font-weight: 700;
     background: #EAF0ED;
-    font-weight: 500;
+    outline: none;
+    border: none;
 }
 .page{
     display: flex;
@@ -162,55 +155,62 @@ body{
     width: 9.4%;/*47%(.product li的width)/5(.page li共有5個)=9.4%*/
 }
 .page a{
-    height: 60px;
     border: solid 1px #EAF0ED;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 24px;
     text-align: center;
     padding: 16px;
 }
 .subscribe{
-    display: flex;
     background: #3F5D45;
+    padding: 30px 0;
+}
+.subscribeForm{
+    display: flex;   
     justify-content: space-between;
     align-items: center;
-    padding: 30px 122px;
 }
-.subscribe label{
+.subscribeForm label{
     display: flex;
     align-items: center;
     margin-right: 40px;
 }
-.subscribe label img{
+.subscribeForm label img{
     width: 40px;
     margin-right: 20px;
 }
-.subscribe label h2{
+.subscribeForm label h2{
     color: #EAF0ED;
     font-size: 24px;
-    line-height: 29px;
 }
-.inputMail{
+.mail{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.mail{
-    background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/mail-24px.png?raw=true");  
-    background-size: 28px;
-    background-repeat: no-repeat;
-    background-position: 20px, center;
+.mailIcon{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.mailIcon .material-icons{
+    font-size: 28px;
+    position: absolute;
+    /* 使用.mailIcon{display: flex; align-items: center;}可以讓此Icon上下置中，但使用top: 50%;就會出問題? */
+    /* top: 50%;  */
+    left: 20px;
+}
+.mailInput{
     text-indent: 60px;
     border: none;
     outline: none;
     width: 315px;
-    height: 56px;
-    font-size: 18px;
+    padding: 16px 0;
+    font-size: 24px;
 }
-.inputMail button{
+.mail button{
     background-color: #FFE180;
     width: 64px;
-    height: 56px;
+    padding: 16px 0;
     border: none;
     outline: none;
     cursor: pointer;
@@ -218,12 +218,14 @@ body{
     justify-content: center;
     align-items: center;
 }
-.subscribe button img{
-    width: 20px;
+.mail button .material-icons{
+    font-size: 28px;
+    color: #3F5D45;
 }
 .footer{
     background: #EAF0ED;
-    padding: 40px 122px 30px 122px;
+    padding-top: 40px;
+    padding-bottom: 30px;
 }
 .footerMain{
     display: flex;
@@ -233,10 +235,6 @@ body{
 .contact img{
     width: 172px;
     margin-bottom: 115px;
-}
-.contactInfo li{
-    font-size: 16px;
-    line-height: 24px;
 }
 .footerLink{
     display: flex;
@@ -252,16 +250,11 @@ body{
 .socialMedia li{
     margin-right: 8px;
 }
-.copyright{
-    font-size: 16px;
-    line-height: 19px;
-}
 .slogan{
-    font-size: 23px;
-    font-family: "Noto Serif TC";
-    font-weight: 600;
+    font-size: 24px;
+    font-family: "Noto Serif TC", sans-serif;
+    font-weight: 700;
     writing-mode: vertical-rl;
-    line-height: 1.5;
     text-indent: -10px;
     padding-top: 10px;/*調回text-indent的距離*/
     letter-spacing: 6px;
@@ -285,19 +278,21 @@ body{
     color: #EAF0ED;
     background: #3F5D45;
 }
-@media(max-width: 992px){
-    .subscribe{
-        flex-direction: column;
-        align-items: center;
-    }
-    .subscribe label{
-        margin-bottom: 30px;
-        margin-right: 0;
+.mailInput:focus{
+    background-color: #EAF0ED;
+}
+@media(max-width: 940px){
+    .header,
+    .main,
+    .subscribeForm,
+    .footerMain,
+    .footerLink{
+        width: 95%;
     }
 }
 @media(max-width: 768px){
-    .wrap{
-        padding: 20px;
+    .header{
+        width: 90%;
     }
     .hamburgerMenu{
         display: block; 
@@ -315,7 +310,9 @@ body{
         padding-left: 30px;
     }
     .main{
+        display: flex;
         flex-direction: column;
+        align-items: center;
     }
     .classifiedMenu{
         width: 100%;
@@ -329,7 +326,7 @@ body{
         width: 50%;
     }
     .mainPage{
-        width: 100%;
+        width: 95%;
     }
     .product{
         justify-content: space-between;
@@ -341,13 +338,13 @@ body{
     .page li{
         width: 9.7%;/*48.5/5=9.7希望.page一直保持與.product li等寬*/
     }
-    .inputMail{
+    .mail{
         width: 100%;
     }
-    .inputMail .mail{
+    .mail .mailInput{
         width: 100%;
     }
-    .inputMail button{
+    .mail button{
         width: 64px;
     }
     .contact img{
@@ -356,17 +353,47 @@ body{
     .slogan{
         display: none;
     }
+    .footerMain{
+        width: 90%;
+    }
     .footerLink{
+        width: 90%;
         flex-direction: column;
         align-items: flex-start;
     }
     .socialMedia{
         margin-bottom: 23px;
     }
+    .subscribeForm{
+        flex-direction: column;
+        align-items: center;
+    }
+    .subscribeForm label{
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+    .mail{
+        width: 50%;
+    }
 }
 @media(max-width: 568px){
+    .header{
+        margin-bottom: 10px;
+    }
+    .banner{
+        margin-bottom: 20px;
+    }
+    .main{
+        margin-bottom: 50px;
+    }
+    .classifiedMenu{
+        margin-bottom: 10px;
+    }
     .classifiedMenu li{
         width: 100%;
+    }
+    .product{
+        margin-bottom: 0;
     }
     .product li{
         width: 100%;
@@ -374,12 +401,10 @@ body{
     .page li{
         width: 20%;
     }
-    .footer, 
-    .subscribe{
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    .subscribe label h2{
+    .subscribeForm label h2{
         font-size: 22px;
+    }
+    .mail{
+        width: 90%;
     }
 }
